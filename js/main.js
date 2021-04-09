@@ -46,3 +46,21 @@ $(document).ready(function () {
     autoplaySpeed: 3000,
   });
 });
+
+$(window).resize(function () {
+  if ($(window).width() < 789) {
+    $('.slider').slick('unslick');
+  } else {
+    $(document).ready(function () {
+    $(".slider").slick({
+      arrows: true,
+      adaptiveHeight: true,
+      centerMode: true,
+      variableWidth: true,
+      speed: 1000,
+      easing: "ease",
+      autoplay: true,
+      autoplaySpeed: 3000,
+    });
+  });}
+});
